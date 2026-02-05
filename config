@@ -22,7 +22,7 @@ set $menu "rofi -show drun -show-icons"
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/andriomdac/Downloads/pexels-eberhardgross-1287145.jpg fill
+output * bg /home/andriomdac/Downloads/pexels-rpnickson-2885320.jpg fill
 #
 # Example configuration:
 #
@@ -233,16 +233,22 @@ bindsym $modalt+Shift+w exec "pkill waybar"
 
 ### Display Settings
 #eDP-1
-bindsym $modalt+1 exec "swaymsg output eDP-1 enable"
-bindsym $modalt+Shift+1 exec "swaymsg output eDP-1 disable"
+bindsym $modalt+u exec "swaymsg output eDP-1 enable"
+
+bindsym $modalt+Shift+u exec "swaymsg output eDP-1 disable"
 #HDMI-A-1
-bindsym $modalt+2 exec "swaymsg output HDMI-A-1 enable"
-bindsym $modalt+Shift+2 exec "swaymsg output HDMI-A-1 disable"
+bindsym $modalt+i exec "swaymsg output HDMI-A-1 enable"
+bindsym $modalt+Shift+i exec "swaymsg output HDMI-A-1 disable"
 
 
 
 ### Autostart applications 
 exec "/usr/lib/polkit-kde-authentication-agent-1"
+
+
+
+# Volume manager
+exec "swaymsg output eDP-1 scale 1.2"
 
 
 include /etc/sway/config.d/*
