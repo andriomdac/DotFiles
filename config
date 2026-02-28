@@ -22,7 +22,6 @@ set $menu "rofi -show drun -show-icons"
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/andriomdac/Downloads/snowchurch.jpg fill
 #
 # Example configuration:
 #
@@ -242,13 +241,14 @@ bindsym $modalt+Shift+i exec "swaymsg output HDMI-A-1 disable"
 
 
 
-### Autostart applications 
+### Autostart 
 exec "/usr/lib/polkit-kde-authentication-agent-1"
+exec "sway output eDP-1 pos 0 0 scale 1.5"
+exec "sway output HDMI-A-1 pos 1920 0 scale 1.2"
 
 
 
-# Volume manager
-exec "swaymsg output eDP-1 scale 1.2"
+exec "swaymsg output eDP-1 scale 1"
 
 
 include /etc/sway/config.d/*
